@@ -13,7 +13,7 @@ MyNotes.addEventListener('keyup',()=>{
     browser.storage.local.set({ MyAllNotes: MyNotes.innerHTML});
 }, false);
 
-
+/*save function*/
 function save(){
 	browser.storage.local.set({ MyAllNotes: MyNotes.innerHTML});
 }
@@ -21,7 +21,7 @@ function save(){
 
 var editorContent = document.getElementById("mnotes");
 
-
+/*get data*/
 document.getElementById("underline").addEventListener("click", underlinee);
 document.getElementById("italic").addEventListener("click", italicc);
 document.getElementById("bold").addEventListener("click", boldd);
@@ -42,7 +42,7 @@ function boldd(){document.execCommand('bold', false, '');save();}
 function undoo(){document.execCommand('undo',false,'');save();}
 function redoo(){document.execCommand('redo',false,'');save();}
 
-
+/*function link*/
 function linkk(){
   var url = prompt("Enter the URL & hit OK");
   
@@ -77,69 +77,3 @@ function cutt(){document.execCommand('strikeThrough',false,'');save();}
 function leftt(){document.execCommand('justifyLeft',false,'');save();}
 function centerr(){document.execCommand('justifyCenter',false,'');save();}
 function rightt(){document.execCommand('justifyRight',false,'');save();}
-
-
-
-function handlePaste (e) {
-		
-		var selectedText=(
-        window.getSelection
-        ?
-            window.getSelection()
-        :
-            document.getSelection
-            ?
-                document.getSelection()
-            :
-                document.selection.createRange().text
-     );
-
-		
-		var clipboardData, pastedData;
-
-		
-	
-
-		// Get pasted data via clipboard API
-    clipboardData = e.clipboardData || window.clipboardData;
-    pastedData = clipboardData.getData('Text');
-    
-    // Do whatever with pasteddata
-
-if(!selectedText || selectedText==""){
-	
-	
-   
-if((pastedData.startsWith("http")) || (pastedData.startsWith("www"))){
-    // Stop data actually being pasted into div
-    e.stopPropagation();
-    e.preventDefault();
-	
-	if(pastedData.startsWith("http")){document.execCommand("insertHTML", false, "<a href='"+ pastedData +"' title='CTRL+Click to open '>"+ pastedData +"</a>");}
-   if(pastedData.startsWith("www")){document.execCommand("insertHTML", false, "<a href='https://"+ pastedData +"' title='CTRL+Click to open https://"+pastedData+"'>"+ pastedData +"</a>");}
-}
-
-   }else{
-
-   if((pastedData.startsWith("http")) || (pastedData.startsWith("www"))){
-	// Stop data actually being pasted into div 
-	e.stopPropagation();
-    e.preventDefault();
-	
-   if(pastedData.startsWith("http")){document.execCommand("insertHTML", false, "<a href='"+ pastedData +"' title='CTRL+Click to open "+pastedData+"'>"+ selectedText +"</a>");}
-   if(pastedData.startsWith("www")){document.execCommand("insertHTML", false, "<a href='https://"+ pastedData +"' title='CTRL+Click to open https://"+pastedData+"'>"+ selectedText +"</a>");}
-   
-}
-	
-         }
- save();
-}
-
-
-
-
-document.getElementById('mnotes').addEventListener('paste', handlePaste);
-
-
-
- 
