@@ -10,22 +10,16 @@ font-family: Bookman Old Style;
 
 
 .editor {
-background: repeat;
-background-image: url("background2.jpg");
-background-attachment: local;
-width: 842px;
-height: 450px;
-padding-top:20px;
-padding-bottom:20px;
-overflow: scroll;
-overflow-x: hidden;
-margin-left:auto;
-margin-right:auto;
-resize:both;
-  box-shadow: 
-        inset 0px 10px 15px -10px rgba(0,0,0,0.5),
-        inset 0px -10px 15px -10px rgba(0,0,0,0.5); 
-
+  background: repeat;
+  background-attachment: local;
+  width: 520px;
+  height: 250px;
+  overflow: scroll;
+  overflow-x: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  resize: both;
+ 
 }
 
 
