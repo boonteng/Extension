@@ -1,13 +1,11 @@
-body{
-margin:-4px;
-padding:0;
-overflow:hidden;
-margin-top:6px;
-background:#614537;
-font-family: Bookman Old Style;
+body {
+  margin: -4px;
+  padding: 0;
+  overflow: hidden;
+  margin-top: 6px;
+  background: #D3D3D3;
+  font-family: Bookman Old Style;
 }
-
-
 
 .editor {
   background: repeat;
@@ -22,11 +20,12 @@ font-family: Bookman Old Style;
  
 }
 
-
+/*background for notes*/
 #mnotes {
 font-family: Bookman Old Style;
 background: repeat;
-background-image: url("background.jpg");
+background-image: url("background1.jpg");
+background-size: cover;
 background-attachment: local;
 font-size: 18px;
 line-height:20px;
@@ -39,8 +38,8 @@ margin-left:auto;
 margin-right:auto;
 resize:both;
  box-shadow: 
-        inset 0px 20px 35px -10px #fef8ba,
-        inset 0px -20px 35px -10px #fef8ba;
+        inset 0px 20px 35px -10px #baeffe,
+        inset 0px -20px 35px -10px #baeffe;
 
 }
 
@@ -57,28 +56,34 @@ resize:both;
     grid-template-columns: repeat(auto-fit,minmax(20px,40px));
     background-color: rgb(231, 231, 231);
     color: rgb(0, 0, 0);
-    grid-gap: 20px;
-    padding: 10px;
+    grid-gap: 10px;
+    padding: 5px;
     justify-content: center;
     align-items:center;
 }
 
 .tool-items{
-    background-color: #614537;
+    background-color:#F0F8FF;
      padding-top: .6rem;
      padding-bottom:.6rem;
     cursor: pointer;
-    color:#fef8ba;
-	box-shadow: 1px 1px 2px black;
-	transition:0.3s;
+    color:#000000;
+  box-shadow: 1px 1px 2px black;
+  transition:0.3s;
 }
 
 .tool-items:hover{
     box-shadow: none;
     color: #ffff;
-	background-color:#483329;
-	transition:0.3s;
+  background-color:#483329;
+  transition:0.3s;
 
 }
 
-
+#wrapper {
+	position: relative;
+	float: left;
+	width: 150px;
+	height: 24px;
+	background: rgba(255,255,255,1.0);
+}
