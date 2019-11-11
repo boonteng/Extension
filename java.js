@@ -1,5 +1,5 @@
 
-const MyNote = document.getElementById('mnotes');
+const MyNotes = document.getElementById('mnotes');
 const gettingItem = browser.storage.local.get('MyAllNotes');
 gettingItem.then((res) => {
 try{
