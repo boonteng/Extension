@@ -14,7 +14,7 @@
 <div style="color:white;text-align:center;padding-right:12px;padding-bottom:6px;color:#2F4F4F;">Smart Notes</div>
 <div class="toolbar">
 
-   <button id="underline" title="Underline" class="tool-items fa fa-underline"></button>
+    <button id="underline" title="Underline" class="tool-items fa fa-underline"></button>
     <button id="italic" title="Italic" class="tool-items fa fa-italic"></button>
     <button id="bold" title="Bold" class="tool-items fa fa-bold"></button>
     <button id="link" title="Create link" class="tool-items fa fa-link"></button>
@@ -24,13 +24,22 @@
     <button id="right" title="Align right" class="tool-items fa fa-align-right"></button>
   <button id="undo" title="Undo" class="tool-items fa fa-mail-reply"></button>
     <button id="redo" title="Redo" class="tool-items fa fa-mail-forward"></button>
+<div id="wrapper">
+                <input id="inputText" type="text" value="" placeholder="Search...."/>
 
+                    <div id="logo"></div>
+
+                    <div id="searchIcon"></div>
+                    <div id="searchBtn" title="Search TheFreeDictionary.com"></div>
+            </div>
 </div>
 
-<div class="editor"><div contenteditable="true" id="mnotes" data-placeholder="Write your notes..."></div></div>
+<div class="editor"><div contenteditable="true" id="mnotes" dataplaceholder="Write your notes..."></div></div>
 
-<div style="color:#fdf9bc;font-size:12px;padding-bottom:8px;padding-top:2px;text-align:center">ESC or click outside to save & close <span style="font-weight:bold">My Notes</span></div>
+<div style="color:#2F4F4F;font-size:12px;padding-bottom:8px;padding-top:2px;text-align:center">ESC or click outside to save & close <span style="font-weight:bold">Smart Notes</span></div>
+
 
 </body>
 <script src="java.js"></script>
+  <script type="text/javascript" src="/searchfunction.js"></script>
 </html>
