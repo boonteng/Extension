@@ -87,3 +87,44 @@ resize:both;
 	height: 24px;
 	background: rgba(255,255,255,1.0);
 }
+/*search icon image*/
+#searchIcon {
+	right: 0px;
+	background: url('../search.jpg') no-repeat center center;
+}
+
+#searchBtn {
+	position: relative;
+	float: right;
+	cursor: pointer;
+	width: 24px;
+	height: 24px;
+	z-index: 2;
+}
+
+#searchIcon, #logo {
+	position: absolute;
+	height: 100%;
+	width: 24px;
+}
+
+
+/*inputtext for the text key in the search box*/
+#inputText {
+	font-size: 12px;
+	font-family: Arial;
+	font-style: normal;
+	font-weight: normal;
+	color: rgba(128,128,128,1.0);
+	height: 24px;
+	position: absolute;
+	background: transparent;
+	border-width: 0px;
+	border-style: none;
+	border-color: rgba(0,0,0,1.0);
+	border-radius: 0px;
+	z-index: 1;
+	width: 100px;
+	padding-left: 10px;
+	padding-right: 40px;
+}	
