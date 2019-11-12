@@ -9,14 +9,34 @@
   
   <table>
   <tbody>
+	<form name="settingForm">
+		<label>
+		Units     
+			<input type="radio" name="units" value="metric" checked>Metric
+			<input type="radio" name="units" value="imperial">Imperial<br>			
+		</label>
+		<label>
+		City 
+			<input type="text" id="city_name" value="Kiev">
+		</label><br>
+		<button type="submit" onclick="saveOptions()" >Save</button>
+    </form>
 	<tr>
 	<th colspan="2">Now</th>
 	</tr>
 	<tr>
-	<td colspan="2" id="city-name"> Kiev, UA</td>
+	<td colspan="2" id="city-name">
+		 
+	</td>
 	</tr>
 	<tr>
-	<td colspan="2"> <img id="weather-icon" src="/icons/09d.png"></img></td>	
+	<td colspan="2"> <img id="weather-icon" src=""></img></td>
+	</tr>
+	<tr>
+		<td colspan="2" id="nowDes"></td>
+	</tr>
+	<tr>
+		<td colspan="2" id="reminder"></td>
 	</tr>
   </tbody>
    
